@@ -1,0 +1,68 @@
+
+// .tab-button-icon {
+//     -webkit-animation-duration: 2s;
+//     animation-duration: 2s;
+//     animation-iteration-count: infinite;
+//     -webkit-animation-name: bounce;
+//     animation-name: bounce;
+// }
+
+// @keyframes bounce {
+//     0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+//     40% {transform: translateY(-30px);}
+//     80% {transform: translateY(-10px);}
+//     // 60% {transform: translateY(-20px);}
+// }
+
+.tabs-md .tab-button[aria-selected=true] .tab-button-text  {
+  transform: none;
+}
+
+
+.boun {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background-color: white;
+}
+
+.wave {
+  flex-grow: 1;
+  height: 50%;
+  background-color: black;
+}
+
+.active-tab {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+}
+
+.unactive-tab {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: bounce-out;
+  animation-name: bounce-out;
+}
+
+@keyframes bounce-out {
+    0% {transform: translateY(-30px)}
+    60% {transform: translateY(-5px);}
+    80% {transform: translateY(-10px);}
+    100% {transform: translateY();}
+}
+
+@keyframes bounce {
+  60% { transform: translateY(-30px);}
+  80% { transform: translateY(-25px);}
+  100% { transform: translateY(-30px);}
+}
