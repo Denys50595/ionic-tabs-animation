@@ -3,7 +3,7 @@ import { Component, ViewChild } from '@angular/core';
 import { AboutPage } from '../about/about';
 import { ContactPage } from '../contact/contact';
 import { HomePage } from '../home/home';
-import { Tabs, Tab } from 'ionic-angular';
+import { Tabs } from 'ionic-angular';
 
 @Component({
   templateUrl: 'tabs.html'
@@ -27,7 +27,7 @@ export class TabsPage {
     const element = document.querySelector('ion-tabs .tabbar');
     const tabs = element.querySelectorAll('a');
     this.observer = new MutationObserver(mutations => {
-      mutations.forEach(function (mutation) {
+      mutations.forEach((mutation) => {
         if (mutation.type === 'attributes' && mutation.attributeName === 'aria-selected') {
           const target = document.querySelector(`[data-effect-for-tab=${(mutation.target as HTMLElement).id.slice(4)}]`);
           const tabControlTarget = mutation.target as HTMLElement;

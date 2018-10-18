@@ -18,6 +18,19 @@
   transform: none;
 }
 
+.tabbar .tab-button {
+  background-color: white;
+  border: none;
+}
+
+.tabbar .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+  width: 0% !important;
+  background-image: none !important;
+}
+
+.tabs-md .tab-button[aria-selected=true] .tab-button-icon {
+  transform: translateY(-5px) scale(1.1);
+}
 
 .boun {
   display: flex;
@@ -28,41 +41,43 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100px;
+  min-height: 5.6rem;
   background-color: white;
 }
 
 .wave {
   flex-grow: 1;
-  height: 50%;
-  background-color: black;
+  height: 2.5rem;
+  background-image: url('/assets/imgs/sample-1.svg');
+  background-size: contain;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  width: 60px;
 }
 
 .active-tab {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+  animation-duration: 500ms;
   animation-fill-mode: forwards;
-  -webkit-animation-name: bounce;
   animation-name: bounce;
 }
 
 .unactive-tab {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+  animation-duration: 600ms;
   animation-fill-mode: forwards;
-  -webkit-animation-name: bounce-out;
   animation-name: bounce-out;
 }
 
 @keyframes bounce-out {
-    0% {transform: translateY(-30px)}
-    60% {transform: translateY(-5px);}
-    80% {transform: translateY(-10px);}
-    100% {transform: translateY();}
+  0% {transform: translateY(-53px)}
+  40% {transform: translateY(-40px);}
+  60% {transform: translateY(-43px);}
+  80% {transform: translateY(-40px);}
+  100% {transform: translateY();}
 }
 
 @keyframes bounce {
-  60% { transform: translateY(-30px);}
-  80% { transform: translateY(-25px);}
-  100% { transform: translateY(-30px);}
+  60% { transform: translateY(-53px);}
+  80% { transform: translateY(-50px);}
+  100% { transform: translateY(-53px);}
 }
