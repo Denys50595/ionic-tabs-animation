@@ -23,9 +23,8 @@
   border: none;
 }
 
-.tabbar .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
-  width: 0% !important;
-  background-image: none !important;
+.tabbar::before {
+  display: none;
 }
 
 .tabs-md .tab-button[aria-selected=true] .tab-button-icon {
